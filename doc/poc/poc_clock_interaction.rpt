@@ -1,0 +1,28 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (lin64) Build 6511674 Tue Jun 16 11:01:26 MDT 2026
+| Date         : Fri Nov  6 15:31:18 2026
+| Host         : guimo running 64-bit unknown
+| Command      : report_clock_interaction -file /home/guimo/RVfpga-Grupo18/RVfpga/RO-PUF/doc/poc/poc_clock_interaction.rpt
+| Design       : ro_standalone_top
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Clock Interaction Report
+
+Clock Interaction Table
+-----------------------
+
+                            WNS                            TNS Failing  TNS Total    WNS Path         Clock-Pair           Inter-Clock  
+From Clock    To Clock      Clock Edges  WNS(ns)  TNS(ns)    Endpoints    Endpoints  Requirement(ns)  Classification       Constraints  
+------------  ------------  -----------  -------  -------  -----------  -----------  ---------------  -------------------  -----------  
+ro_div        ro_clk        rise - rise     1.66     0.00            0            1             3.00  Clean                Timed        
+ro_div        ro_div        rise - rise     3.16     0.00            0           65             6.00  Clean                Timed        
+ro_div        sys_clk_pin                                            0           32                   Ignored              False Path   
+sys_clk_pin   ro_clk                                                 0            1                   Ignored              False Path   
+sys_clk_pin   ro_div                                                 0           35                   Ignored              False Path   
+sys_clk_pin   sys_clk_pin   rise - rise     4.48     0.00            0          296            10.00  Clean                Timed        
+
+
